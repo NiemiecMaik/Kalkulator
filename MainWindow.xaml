@@ -1,0 +1,131 @@
+﻿<Window x:Class="kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kalkulator"
+        mc:Ignorable="d"
+        
+        Title="MainWindow"
+        Height="735"
+        Width="416"
+        FontSize="24"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            TextAlignment="Right"
+            Padding="5"
+            Text="{Binding WyświetlaneDziałanie}"
+            />
+        <TextBlock
+            TextAlignment="Right"
+            Padding="5"
+            Grid.Row="1"
+            Text="{Binding WyświetlanaLiczba}"
+            />
+
+        <WrapPanel Grid.Row="2" Margin="0,0,0,-88">
+            <Button Click="WprowadźDziałanie">%</Button>
+            <Button Click="WyczyśćWszystko">C</Button>
+            <Button Click="Wyczyść">CE</Button>
+            <Button Click="Kasuj">↶</Button>
+            <Button Click="WprowadźDziałanie">1/x</Button>
+            <Button Click="WprowadźDziałanie">x²</Button>
+            <Button Click="WprowadźDziałanie">√</Button>
+            <Button Click="WprowadźDziałanie">÷</Button>
+            <Button Click="WprowadźDziałanie">mod</Button>
+            <Button Click="WprowadźDziałanie">x!</Button>
+            <Button Click="WprowadźDziałanie">log</Button>
+            <Button Click="WprowadźDziałanie">floor</Button>
+            <Button Click="WprowadźDziałanie">ceil</Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                7
+            </Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                8
+            </Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                9
+            </Button>
+            <Button Click="WprowadźDziałanie">×</Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                4
+            </Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                5
+            </Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                6
+            </Button>
+            <Button Click="WprowadźDziałanie">-</Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="WprowadźCyfrę"
+                >
+                1
+            </Button>
+            <Button
+                Click="WprowadźCyfrę"
+                Style="{DynamicResource Liczby}"
+                >
+                2
+            </Button>
+            <Button
+                Click="WprowadźCyfrę"
+                Style="{DynamicResource Liczby}"
+                >
+                3
+            </Button>
+            <Button Click="WprowadźDziałanie">+</Button>
+            <Button
+                Click="ZmieńZnak"
+                Style="{DynamicResource Liczby}"
+                >
+                +/-
+            </Button>
+            <Button
+                Click="WprowadźCyfrę"
+                Style="{DynamicResource Liczby}"
+                >
+                0
+            </Button>
+            <Button
+                Style="{DynamicResource Liczby}"
+                Click="Przecinek"
+                >
+                ,
+            </Button>
+            <Button
+                Style="{DynamicResource Wyróżnione}"
+                Template="{DynamicResource WyróżnioneTemplate}"
+                Click="WykonajDziałanie"
+                >
+                =
+            </Button>
+        </WrapPanel>
+    </Grid>
+</Window>
